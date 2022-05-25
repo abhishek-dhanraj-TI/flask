@@ -32,6 +32,23 @@ def get_widgets():
 
   return json.dumps(json_data)
 
+@app.route('/add')
+def add_items():
+  mydb = mysql.connector.connect(
+    host="mysqldb",
+    user="root",
+    password="p@ssw0rd1",
+    database="inventory"
+  )
+  cursor = mydb.cursor()
+
+  cursor.execute("insert into widgets(name, description) values('kjsbdg','gkhrfdg');");
+  cursor.execute("insert into widgets(name, description) values('hkhgfjsgdfgdfhbdg','fgkhrfdg');");
+  mydb.commit()
+  cursor.close()
+  return "Added some random values"
+
+  
 @app.route('/initdb')
 def db_init():
   mydb = mysql.connector.connect(
