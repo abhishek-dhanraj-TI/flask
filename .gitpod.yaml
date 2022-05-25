@@ -2,6 +2,7 @@ tasks:
   - init: |
      docker-compose pull
   - command: |
+     echo 'hello'
      docker-compose up
 
 ports:
