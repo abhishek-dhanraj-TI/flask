@@ -8,13 +8,6 @@ services:
   volumes:
   - ./:/app1
 
- web2:
-   build: ./app2
-   ports:
-   - 8080:5000
-   volumes:
-   - ./:/app2
-
  mysqldb:
   image: mysql:8.0-oracle
   ports:
