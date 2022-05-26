@@ -7,7 +7,6 @@ services:
   - MYSQL_HOST=localhost
   - MYSQL_USER=root
   - MYSQL_PASSWORD=p@ssw0rd1
-  - MYSQL_DB=inventory
   ports:
   - 8000:5000
   volumes:
