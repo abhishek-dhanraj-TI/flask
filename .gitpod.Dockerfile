@@ -1,1 +1,1 @@
-FROM devspaces/workspace-mysql
+FROM devfactory/workspace-mysql
