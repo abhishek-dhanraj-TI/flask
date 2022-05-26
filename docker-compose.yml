@@ -3,11 +3,8 @@ version: '3.8'
 services:
  web1:
   build: ./app1
-  environment:
-  - MYSQL_HOST=localhost
-  - MYSQL_USER=root
-  - MYSQL_PASSWORD=p@ssw0rd1
   ports:
   - 8000:5000
   volumes:
   - ./:/app1
+  network_mode: host
